@@ -1,0 +1,32 @@
+{
+  "name": "Shumper's Burrow Bliss",
+  "short_name": "Shumper",
+  "description": "Help Shumper make all the rabbits happy while avoiding the shepherd and his dog!",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "#32CD32",
+  "background_color": "#87CEEB",
+  "icons": [
+    {
+      "src": "assets/characters/shumper_idle.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/characters/shumper_idle.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/characters/shumper_idle.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "scope": "./",
+  "prefer_related_applications": false
+}
+
