@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Shumper's Burrow Bliss</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Shumper's Burrow Bliss">
+    <meta name="theme-color" content="#2E8B57">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" href="assets/characters/shumper_idle.png">
+    <link rel="apple-touch-icon" href="assets/characters/shumper_idle.png">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Main Menu Screen -->
+        <div id="menuScreen" class="screen">
+            <div class="menu-content">
+                <h1>Shumper's Burrow Bliss</h1>
+                <img src="assets/characters/shumper_idle.png" alt="Shumper" class="character-logo">
+                <div class="menu-buttons">
+                    <button id="playButton" class="game-button">
+                        <img src="assets/ui/play_button.png" alt="Play">
+                        Play Game
+                    </button>
+                    <button id="instructionsButton" class="game-button">
+                        Instructions
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructionsScreen" class="screen hidden">
+            <div class="instructions-content">
+                <h2>How to Play</h2>
+                
+                <div class="instruction-item">
+                    <img src="assets/characters/shumper_idle.png" alt="Shumper">
+                    <p>You are Shumper! Tap to move around the meadow.</p>
+                </div>
+                
+                <div class="instruction-item">
+                    <img src="assets/characters/female_rabbit_happy.png" alt="Happy Rabbit">
+                    <p>Make all the rabbits happy by getting close to them.</p>
+                </div>
+                
+                <div class="instruction-item">
+                    <img src="assets/characters/shepherd.png" alt="Shepherd">
+                    <p>Avoid the shepherd and his dog or you'll lose a life!</p>
+                </div>
+                
+                <div class="instruction-item">
+                    <img src="assets/items/golden_carrot.png" alt="Power-up">
+                    <p>Collect power-ups for special abilities.</p>
+                </div>
+                
+                <button id="backButton" class="game-button">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen hidden">
+            <!-- Game UI -->
+            <div id="gameUI">
+                <div class="ui-top">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <button id="pauseButton" class="ui-button">
+                        <img src="assets/ui/pause_button.png" alt="Pause">
+                    </button>
+                    <div class="lives">Lives: <span id="lives">3</span></div>
+                </div>
+                <div class="level-info">
+                    <div>Level <span id="level">1</span></div>
+                    <div>Rabbits: <span id="rabbitsLeft">3</span></div>
+                </div>
+            </div>
+            
+            <!-- Game Canvas -->
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pauseScreen" class="screen overlay hidden">
+            <div class="pause-content">
+                <h2>Game Paused</h2>
+                <div class="menu-buttons">
+                    <button id="resumeButton" class="game-button">Resume</button>
+                    <button id="menuButton" class="game-button">Main Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameoverScreen" class="screen overlay hidden">
+            <div class="gameover-content">
+                <h2>Game Over</h2>
+                <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+                <div class="menu-buttons">
+                    <button id="playAgainButton" class="game-button">Play Again</button>
+                    <button id="restartButton" class="game-button">Main Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>
+
